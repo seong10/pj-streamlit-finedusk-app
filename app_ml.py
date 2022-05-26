@@ -3,6 +3,7 @@ import joblib
 from fbprophet import Prophet
 import matplotlib.pyplot as plt
 import pandas as pd
+from PIL import Image
 
 def run_ml() :
     st.subheader('미래의 미세먼지 예측')
@@ -14,8 +15,10 @@ def run_ml() :
 
     st.title('')
     st.text('미래로 갈수록 미세먼지량은 많아진다고 예측되었습니다')
-    fig1 = prophet.plot(forecast)
-    st.pyplot(fig1)
+    img = Image.open('data/prophet_plot.png')
+    st.image(img)
+    # fig1 = prophet.plot(forecast) # 파일이 커서 서버에서 안돌아감
+    # st.pyplot(fig1)
 
     year_list = ['2019', '2020', '2021', '2022']
     mouth_list = range(1, 12+1)
