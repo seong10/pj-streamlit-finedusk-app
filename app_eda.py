@@ -30,7 +30,7 @@ def run_eda() :
     import matplotlib
 
     fm.get_fontconfig_fonts()
-    path = '/home/ec2-user/anaconda3/envs/streamlit3.7/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf'
+    path = '/usr/share/fonts/nanum/NanumMyeongjo.ttf'
     font_name = fm.FontProperties(fname=path).get_name()
     matplotlib.rc('font', family=font_name)
 
