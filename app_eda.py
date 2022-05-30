@@ -25,14 +25,14 @@ def run_eda() :
     # # else:
     # #     print('Unknown system... sorry~~~~')
 
-    import matplotlib.pyplot as plt
-    import matplotlib.font_manager as fm
-    import matplotlib
+    # import matplotlib.pyplot as plt
+    # import matplotlib.font_manager as fm
+    # import matplotlib
 
-    fm.get_fontconfig_fonts()
-    path = '/usr/share/fonts/nanum/NanumMyeongjo.ttf'
-    font_name = fm.FontProperties(fname=path).get_name()
-    matplotlib.rc('font', family=font_name)
+    # fm.get_fontconfig_fonts()
+    # path = '/usr/share/fonts/nanum/NanumMyeongjo.ttf'
+    # font_name = fm.FontProperties(fname=path).get_name()
+    # matplotlib.rc('font', family=font_name)
 
    
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
