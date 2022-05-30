@@ -34,7 +34,15 @@ def run_eda() :
     # font_name = fm.FontProperties(fname=path).get_name()
     # matplotlib.rc('font', family=font_name)
 
-   
+    import matplotlib as mpl
+
+    # 유니코드 깨짐현상 해결
+    mpl.rcParams['axes.unicode_minus'] = False
+
+    # 나눔고딕 폰트 적용
+    plt.rcParams["font.family"] = 'NanumGothic'
+
+
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
     st.title('')
 
