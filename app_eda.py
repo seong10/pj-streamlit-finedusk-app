@@ -9,7 +9,7 @@ def run_eda() :
     import platform
 
     from matplotlib import font_manager, rc
-    plt.rcParams['axes.unicode_minus'] = False
+    # plt.rcParams['axes.unicode_minus'] = False
 
     # if platform.system() == 'Darwin':
     #     rc('font', family='AppleGothic')
