@@ -25,22 +25,22 @@ def run_eda() :
     # # else:
     # #     print('Unknown system... sorry~~~~')
 
-    # import matplotlib.pyplot as plt
-    # import matplotlib.font_manager as fm
-    # import matplotlib
+    import matplotlib.pyplot as plt
+    import matplotlib.font_manager as fm
+    import matplotlib
 
-    # fm.get_fontconfig_fonts()
-    # path = '/usr/share/fonts/nanum/NanumMyeongjo.ttf'
-    # font_name = fm.FontProperties(fname=path).get_name()
-    # matplotlib.rc('font', family=font_name)
+    fm.get_fontconfig_fonts()
+    path = '/home/ec2-user/anaconda3/envs/streamlit3.7/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf'
+    font_name = fm.FontProperties(fname=path).get_name()
+    matplotlib.rc('font', family=font_name)
 
-    import matplotlib as mpl
+    # import matplotlib as mpl
 
-    # 유니코드 깨짐현상 해결
-    mpl.rcParams['axes.unicode_minus'] = False
+    # # 유니코드 깨짐현상 해결
+    # mpl.rcParams['axes.unicode_minus'] = False
 
-    # 나눔고딕 폰트 적용
-    plt.rcParams["font.family"] = 'NanumGothic'
+    # # 나눔고딕 폰트 적용
+    # plt.rcParams["font.family"] = 'NanumGothic'
 
 
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
