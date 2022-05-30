@@ -19,7 +19,7 @@ def run_eda() :
         # path = "c:/Windows/Fonts/malgun.ttf"
     fm.get_fontconfig_fonts()
     # path = "/usr/share/fonts/nanum/NanumGothicBold.ttf"
-    path = "./NanumGothic.ttf"
+    path = "/usr/share/fonts/nanum/NanumGothic.ttf"
     font_name = fm.FontProperties(fname=path).get_name()
     matplotlib.rc('font', family=font_name)
     # else:
