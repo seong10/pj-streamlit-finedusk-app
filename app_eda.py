@@ -25,28 +25,13 @@ def run_eda() :
     # # else:
     # #     print('Unknown system... sorry~~~~')
 
-    import numpy as np
-    import pandas as pd
     import matplotlib.pyplot as plt
-    import seaborn as sb
+    import matplotlib.font_manager as fm
 
-    # %matplotlib inline
+    path = '/usr/share/fonts/nanum/NanumMyeongjo.ttf'
+    fontprop = fm.FontProperties(fname=path)
 
-    import platform
-
-    from matplotlib import font_manager, rc
-    plt.rcParams['axes.unicode_minus'] = False
-
-    if platform.system() == 'Darwin':
-        rc('font', family='AppleGothic')
-    elif platform.system() == 'Windows':
-        path = "/usr/share/fonts/nanum/NanumGothic.ttf"
-        font_name = font_manager.FontProperties(fname=path).get_name()
-        rc('font', family=font_name)
-    else:
-        print('Unknown system... sorry~~~~')
-
-
+   
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
     st.title('')
 
