@@ -6,24 +6,45 @@ import seaborn as sb
 # %matplotlib inline
 
 def run_eda() :
-    # import platform
+    # # import platform
 
-    # from matplotlib import font_manager, rc
-    import matplotlib.font_manager as fm
-    import matplotlib
-    # plt.rcParams['axes.unicode_minus'] = False
+    # # from matplotlib import font_manager, rc
+    # import matplotlib.font_manager as fm
+    # import matplotlib
+    # # plt.rcParams['axes.unicode_minus'] = False
 
-    # if platform.system() == 'Darwin':
-    #     rc('font', family='AppleGothic')
-    # elif platform.system() == 'Windows':
-        # path = "c:/Windows/Fonts/malgun.ttf"
-    fm.get_fontconfig_fonts()
-    # path = "/usr/share/fonts/nanum/NanumGothicBold.ttf"
-    path = "/usr/share/fonts/nanum/NanumGothic.ttf"
-    font_name = fm.FontProperties(fname=path).get_name()
-    matplotlib.rc('font', family=font_name)
-    # else:
-    #     print('Unknown system... sorry~~~~')
+    # # if platform.system() == 'Darwin':
+    # #     rc('font', family='AppleGothic')
+    # # elif platform.system() == 'Windows':
+    #     # path = "c:/Windows/Fonts/malgun.ttf"
+    # fm.get_fontconfig_fonts()
+    # # path = "/usr/share/fonts/nanum/NanumGothicBold.ttf"
+    # path = "/usr/share/fonts/nanum/NanumGothic.ttf"
+    # font_name = fm.FontProperties(fname=path).get_name()
+    # matplotlib.rc('font', family=font_name)
+    # # else:
+    # #     print('Unknown system... sorry~~~~')
+
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sb
+
+    # %matplotlib inline
+
+    import platform
+
+    from matplotlib import font_manager, rc
+    plt.rcParams['axes.unicode_minus'] = False
+
+    if platform.system() == 'Darwin':
+        rc('font', family='AppleGothic')
+    elif platform.system() == 'Windows':
+        path = "c:/Windows/Fonts/malgun.ttf"
+        font_name = font_manager.FontProperties(fname=path).get_name()
+        rc('font', family=font_name)
+    else:
+        print('Unknown system... sorry~~~~')
 
 
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
