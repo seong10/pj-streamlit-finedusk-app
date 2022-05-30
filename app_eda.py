@@ -14,7 +14,8 @@ def run_eda() :
     if platform.system() == 'Darwin':
         rc('font', family='AppleGothic')
     elif platform.system() == 'Windows':
-        path = "c:/Windows/Fonts/malgun.ttf"
+        # path = "c:/Windows/Fonts/malgun.ttf"
+        path = "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"
         font_name = font_manager.FontProperties(fname=path).get_name()
         rc('font', family=font_name)
     else:
