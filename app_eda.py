@@ -11,15 +11,15 @@ def run_eda() :
     from matplotlib import font_manager, rc
     plt.rcParams['axes.unicode_minus'] = False
 
-    if platform.system() == 'Darwin':
-        rc('font', family='AppleGothic')
-    elif platform.system() == 'Windows':
+    # if platform.system() == 'Darwin':
+    #     rc('font', family='AppleGothic')
+    # elif platform.system() == 'Windows':
         # path = "c:/Windows/Fonts/malgun.ttf"
-        path = "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"
-        font_name = font_manager.FontProperties(fname=path).get_name()
-        rc('font', family=font_name)
-    else:
-        print('Unknown system... sorry~~~~')
+    path = "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"
+    font_name = font_manager.FontProperties(fname=path).get_name()
+    rc('font', family=font_name)
+    # else:
+    #     print('Unknown system... sorry~~~~')
 
 
     st.subheader('2019년도 온실가스 배출량과 미세먼지량의 평균데이터')
